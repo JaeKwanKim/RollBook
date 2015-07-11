@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+  h1= title
+  br
+  form(action="/classinfo/add_classinfo", method="post")
+    #class_form
+      ul#class_add
+        li 강 의 명  :
+          input(type="text", name="classname", required)
+        li 교수이름 :
+          input(type="text", name="profe", required)
+        li 핸 드 폰  :
+          input(type="tel", name="hp")
+        li 이 메 일  :
+          input(type="email", name="email")
+        li 소       개  :
+          input(type="text", name="intro")
+        br
+        input(type="submit", value="저장하기")      

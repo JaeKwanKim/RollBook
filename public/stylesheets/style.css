@@ -1,0 +1,108 @@
+section {
+  padding-left: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a#btn {
+  color: #00B7FF;
+  padding: 5px;
+  border: red thin dotted;
+  text-decoration: none;
+}
+
+nav {
+  color: white;
+}
+
+select {
+  width: 100px;
+  border: 0;
+  overflow: scroll;
+}
+input {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+#topmenu {
+  height: 30px;
+  width: 100%;
+}
+
+#topmenu ul li {
+  list-style: none;
+  color: #fff;
+  background-color: #2d2d2d;
+  float: left;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#topmenu .menulink a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  width: 170px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Trebuchet MS", Dotom, Arial;
+}
+
+#topmenu .menulink a:hover {
+  color: blue;
+  background-color: #4d4d4d;
+}
+
+footer {
+  padding-left: 50px;
+  position: relative;
+  top: 10px;
+}
+
+table.classil {
+  border-collapse: collapse;
+  text-align: center;
+  text-indent: 2px;
+  line-height: 1.5;
+  border-left: 1px solid #ccc;
+  margin: 10px 10px;
+}
+
+table.classil thead th {
+  padding: 10px;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 2px solid #c00;
+  background: #dcdcd1;
+}
+
+table.classil tbody th {
+  width: 95px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background: #ececec;
+}
+
+table.classil td {
+  width: 95px;
+  padding: 10px;
+  vertical-align: top;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#class_add li {
+  width: 50%;
+  padding: 10px;
+  margin-left: 50px;
+  text-align: adjust;
+}
+
+h1 {
+  margin-left: 50px;
+}

@@ -1,0 +1,79 @@
+﻿{
+{ 
+"classname": "정보통신",
+"profe": "안기중",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+{ 
+"classname": "객체지향",
+"profe": "객체교수",
+"hp": "010-1233-1434",
+"email": "alsk3423f@naver.com",
+"intro": "짱남."
+},
+{ 
+"classname": "이산수학",
+"profe": "이산교수",
+'hp": "010-4342-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+{ 
+"classname": "컴퓨터 프로그래밍",
+"profe": "컴공교수",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+{ 
+"classname": "알고리즘설계 및 분석",
+"profe": "변상태",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+{ 
+"classname": "컴퓨터논리회로",
+"profe": "안기중",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+{ 
+"classname": "임베디드",
+"profe": "안기중",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함.”
+},
+{ 
+"classname": "논리회로",
+"profe": "안기중",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+{ 
+"classname": "정보와인터넷",
+"profe": "안기중",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+{ 
+"classname": "컴퓨터그래픽스",
+"profe": "안기중",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+{ 
+"classname": "그냥이것저것",
+"profe": "안기중",
+"hp": "010-1122-1111",
+"email": "alskjdf@naver.com",
+"intro": "들을만함."
+},
+}

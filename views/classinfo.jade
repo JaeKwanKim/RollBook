@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  section#classinfo 
+    h1= title + " 알림"
+    br
+    form(name='classinfo', action="/control", method="post")
+      table.classil
+        thead
+          tr
+            th(scope="cols") 과목명
+            th(scope="cols") 교수명
+            th(scope="cols") 핸드폰
+            th(scope="cols") E-mail
+            th(scope="cols") Intro.
+            th(scope="cols") 변경/삭제
+        tbody#tablebody
+          - for(var i = 0; i < data.length; i++) {
+            tr
+              td= data[i].classname
+              td= data[i].profe
+              td= data[i].hp
+              td= data[i].email
+              td= data[i].intro
+              td
+                a#btn(class="edit", href="classinfo/edit/#{data[i].classname}") 변경  
+                a#btn(class="delete", href="classinfo/delete/#{data[i].classname}") 삭제
+          - }  
+      a#btn(href="/classinfo/add") 추가하기
+    hr   
+ 
