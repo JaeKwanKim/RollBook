@@ -4,6 +4,6 @@
 
 3. bluetooth communication with beacon.
 
-4. node.js server html serve to client. student veiw.
+4. node.js html server serve to client. student view.
 
  
