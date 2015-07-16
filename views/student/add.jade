@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+  h1= title
+  br
+  form(action="/student/add_studentinfo", method="post")
+    #class_form
+      ul#class_add
+        li 학       번  :
+          input(type="text", name="classnum", required)
+        li 이       름  :
+          input(type="text", name="name", required)
+        li 핸 드 폰  :
+          input(type="tel", name="hp")
+        li 수강과목  :
+          input(type="text", name="setclass1")
+        li 수강과목  :
+          input(type="text", name="setclass2")
+        li 수강과목  :
+          input(type="text", name="setclass3")
+        li 수강과목  :
+          input(type="text", name="setclass4")
+        li 수강과목  :
+          input(type="text", name="setclass5")
+        li 수강과목  :
+          input(type="text", name="setclass6")
+        br
+        input(type="submit", value="저장하기")      

@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  section#student 
+    h1= title + " 알림"
+    br
+    #studentinfo
+      table.classil
+        thead
+          tr
+            th(scope="cols") 학번
+            th(scope="cols") 이름
+            th(scope="cols") 핸드폰
+            th(scope="cols") 수강과목
+            th(scope="cols") 수강과목
+            th(scope="cols") 수강과목
+            th(scope="cols") 수강과목
+            th(scope="cols") 수강과목
+            th(scope="cols") 수강과목
+            th(scope="cols") 변경/삭제
+        tbody#tablebody
+          - for(var i = 0; i < data.length; i++) {
+            tr
+              td= data[i].classnum
+              td= data[i].name
+              td= data[i].hp
+              td= data[i].setclass1
+              td= data[i].setclass2
+              td= data[i].setclass3
+              td= data[i].setclass4
+              td= data[i].setclass5
+              td= data[i].setclass6
+              td
+                a#btn(class="s_edit", href="student/edit/#{data[i].classnum}") 변경  
+                a#btn(class="s_delete", href="student/delete/#{data[i].classnum}") 삭제
+          - }  
+      a#btn(href="/student/add") 추가하기
+    hr   
+ 
+ 

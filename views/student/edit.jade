@@ -1,0 +1,28 @@
+extends ../layout
+
+block content
+  h1= title
+  br
+  form(action="/student/edit_studentinfo", method="post")
+    #class_form
+      ul#class_add
+        li 학       번  :
+          input#a(type="text", name="classnum", required, value=data[0].classnum)
+        li 이       름  :
+          input#b(type="text", name="name", required, value=data[0].name)
+        li 핸 드 폰  :
+          input#c(type="tel", name="hp", value=data[0].hp)
+        li 수강과목  :
+          input#d(type="text", name="setclass1", value=data[0].setclass1)
+        li 수강과목  :
+          input#e(type="text", name="setclass2", value=data[0].setclass2)
+        li 수강과목  :
+          input#f(type="text", name="setclass3", value=data[0].setclass3)
+        li 수강과목  :
+          input#g(type="text", name="setclass4", value=data[0].setclass4)
+        li 수강과목  :
+          input#h(type="text", name="setclass5", value=data[0].setclass5)
+        li 수강과목  :
+          input#j(type="text", name="setclass6", value=data[0].setclass6)
+        br
+        input(type="submit", value="변경하기")
