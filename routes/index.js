@@ -109,7 +109,7 @@ router.get('/classinfo/delete/:id', function(req, res) {
     var id = req.params.id;
     req.getConnection(function(err, connection) {
 	connection.query("DELETE FROM classinfo WHERE classname = ?",[id], function(err, rows) {
-	    if(err) console.log("Error deleting : %s", err);
+	    if(err) console.log("Error ClassInfo deleting : %s", err);
 	    res.redirect('/classinfo');
 	});
     });
@@ -119,7 +119,7 @@ router.get('/classinfo/edit/:id', function(req, res) {
     var id = req.params.id;
     req.getConnection(function(err, connection) {
 	connection.query("SELECT * FROM classinfo WHERE classname = ?",[id], function(err, rows) {
-	    if(err) console.log("Error editing : %s", err)
+	    if(err) console.log("Error editing : %s", err);
 	    res.render('classinfo/edit', {
 		title: "강의정보 변경",
 		data: rows });
@@ -144,6 +144,84 @@ router.post('/classinfo/edit_classinfo', function(req, res) {
     });
 });
 
+router.get('/student', function(req, res) {
+    req.getConnection(function (err, connection) {
+	connection.query("SELECT * FROM student", function (err, rows) {
+	    if(err) console.log("Error Student DB Open : %s", err);
+	    res.render('student', {
+		title: "학생정보",
+		data: rows });
+	});
+    });
+});
+
+router.get('/student/add', function(req, res) {
+    res.render('student/add', {
+	title: "학생정보 추가"
+    });
+});
+
+router.get('/student/delete/:id', function(req, res) {
+    var id = req.params.id;
+    req.getConnection(function (err, connection) {
+	connection.query("DELETE FROM student WHERE classnum = ?",[id], function(err, rows) {
+	    if(err) console.log("Error Student Deleted failed : %s", err);
+	    res.redirect('/student');
+	});
+    });
+}); 
+
+router.get('/student/edit/:id', function(req, res) {
+    var id = req.params.id;
+    req.getConnection(function (err, connection) {
+	connection.query("SELECT * FROM student WHERE classnum = ?",[id], function(err, rows) {
+	    if(err) console.log("Error Student Editing Failed : %s", err);
+	    res.render('student/edit', {
+		title: "학생정보 변경",
+		data: rows });
+	});
+    });
+});
+
+router.post('/student/add_studentinfo', function(req, res) {
+    var input = JSON.parse(JSON.stringify(req.body));
+    req.getConnection(function (err, connection) {
+	var data = {
+	    classnum: input.classnum,
+	    name: input.name,
+	    hp: input.hp,
+	    setclass1: input.setclass1,
+	    setclass2: input.setclass2,
+            setclass3: input.setclass3,
+            setclass4: input.setclass4,
+	    setclass5: input.setclass5,
+	    setclass6: input.setclass6 };
+	connection.query("INSERT INTO student set ?",data, function( err, rows) {
+	    if(err) console.log("Error student Adding failed : %s",err);
+	    res.redirect('/student');
+	});
+    });
+});
+
+router.post('/student/edit_studentinfo', function(req, res) {
+    var input = JSON.parse(JSON.stringify(req.body));
+    req.getConnection(function(err, connection) {
+	var data = {
+	    classnum: input.classnum,
+	    name: input.name,
+	    hp: input.hp,
+	    setclass1: input.setclass1,
+  	    setclass2: input.setclass2,
+	    setclass3: input.setclass3,
+	    setclass4: input.setclass4,
+	    setclass5: input.setclass5,
+	    setclass6: input.setclass6 }
+	connection.query("UPDATE student set ? WHERE classnum = ?",[data, data.classnum], function(err, rows) {
+	    if(err) console.log("Error updating failed : %s", err);
+	    res.redirect('/student');
+	});
+    });
+});
 
 
 module.exports = router;

@@ -43,7 +43,7 @@ input {
   text-decoration: none;
   color: #fff;
   display: block;
-  width: 170px;
+  width: 200px;
   font-size: 12px;
   font-weight: bold;
   font-family: "Trebuchet MS", Dotom, Arial;
@@ -106,3 +106,4 @@ table.classil td {
 h1 {
   margin-left: 50px;
 }
+
